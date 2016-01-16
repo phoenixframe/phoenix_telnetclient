@@ -17,4 +17,7 @@ phoenixframework平台的一个模块，用于对socketserver进行操作<br>
 13.exit - exit client,ex:exit<br>
 <br>
 该工具用于部署到远程机器上，既是客户端也可以作为服务端，可以通过telnet命令或socket客户端给它发送命令，它可以完成一系列远程操作。<br>
+支持两种启动模式：<br>
+1.java -jar TCPServer.jar 7788 ,这种模式接收一个命令一个操作方式<br>
+2.java -jar TCPServer.jar 7788 monitor ，这种模式用于对一个对象持续监控，并每秒通知一次客户端，客户端连接之后，除非客户端发送停止命令，否则保持一直连接。<br>
 还可以作为简单的聊天工具~~
